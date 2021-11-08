@@ -84,7 +84,7 @@ public class EmployeeController {
 		}
 	}
 
-	@GetMapping("/login")
+/*	@GetMapping("/login")
 	public ModelAndView login() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("login");
@@ -96,7 +96,7 @@ public class EmployeeController {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("loginSuccess");
 		return mv;
-	}
+	}*/
 }
 
 /*
