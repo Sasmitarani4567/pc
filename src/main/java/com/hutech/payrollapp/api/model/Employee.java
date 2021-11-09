@@ -320,7 +320,7 @@ public class Employee {
 	}
 
 	public Employee(String empId, String empFirstName, String empLastName, String password, String resetPassword,
-			String phnoeNumber, String gender, Date dateOfBirth, String address1, String address2, String empEmail,
+			String phnoeNumber, String gender, String dateOfBirth, String address1, String address2, String empEmail,
 			String joiningDate, String relievingDate, String managerEmail, int experience, String qualication,
 			int bankAccountNo, String ifscCode, String bankName, String branchName, String employeement,
 			Designation designation, Role roles, Department department) {
