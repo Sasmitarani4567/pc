@@ -31,11 +31,11 @@ public class Employee {
 	@Pattern(regexp = "^[A-Za-z]*$")
 	@Size(min = 3, max = 15, message = "LAST NAME MUST BE BETWEEN 3 TO 15 CHARACTERS")
 	private String empLastName;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String password;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String resetPassword;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String verificationToken;
 	private boolean enabled;
 
@@ -66,13 +66,13 @@ public class Employee {
 	private String managerEmail;
 	private int experience;
 	private String qualication;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private int bankAccountNo;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String ifscCode;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String bankName;
-	@JsonProperty(access=JsonProperty.Access.WRITE_ONLY)
+	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	private String branchName;
 
 	@Lob
@@ -81,7 +81,6 @@ public class Employee {
 	@Lob
 	private byte[] resume;
 
-	
 	private String employeement;
 
 	@OneToOne
@@ -272,10 +271,6 @@ public class Employee {
 		this.branchName = branchName;
 	}
 
-	
-	  
-	 
-
 	public byte[] getImage() {
 		return image;
 	}
@@ -288,14 +283,10 @@ public class Employee {
 		this.image = image;
 	}
 
-	
-	 
-
 	public void setResume(byte[] resume) {
 		this.resume = resume;
 	}
 
-	
 	public String getEmployeement() {
 		return employeement;
 	}
@@ -328,13 +319,11 @@ public class Employee {
 		this.department = department;
 	}
 
-	
-
 	public Employee(String empId, String empFirstName, String empLastName, String password, String resetPassword,
 			String phnoeNumber, String gender, Date dateOfBirth, String address1, String address2, String empEmail,
 			Date joiningDate, Date relievingDate, String managerEmail, int experience, String qualication,
-			int bankAccountNo, String ifscCode, String bankName, String branchName,
-			String employeement, Designation designation, Role roles, Department department) {
+			int bankAccountNo, String ifscCode, String bankName, String branchName, String employeement,
+			Designation designation, Role roles, Department department) {
 		super();
 		this.empId = empId;
 		this.empFirstName = empFirstName;
@@ -369,5 +358,4 @@ public class Employee {
 		super();
 	}
 
-	
 }
