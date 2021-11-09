@@ -47,7 +47,7 @@ public class Employee {
 	private String gender;
 
 	@NotEmpty
-	private Date dateOfBirth;
+	private String dateOfBirth;
 
 	@NotEmpty
 	@Size(min = 5, max = 50, message = "ADDRESS MUST BE 5 TO 50 CHARACTERS")
@@ -58,8 +58,8 @@ public class Employee {
 	@Size(min = 10, max = 30, message = "ADDRESS MUST BE 10 TO 30 CHARACTERS")
 	@Email
 	private String empEmail;
-	private Date joiningDate;
-	private Date relievingDate;
+	private String joiningDate;
+	private String relievingDate;
 
 	@NotEmpty
 	@Email
@@ -167,11 +167,11 @@ public class Employee {
 		this.gender = gender;
 	}
 
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -199,19 +199,19 @@ public class Employee {
 		this.empEmail = empEmail;
 	}
 
-	public Date getJoiningDate() {
+	public String getJoiningDate() {
 		return joiningDate;
 	}
 
-	public void setJoiningDate(Date joiningDate) {
+	public void setJoiningDate(String joiningDate) {
 		this.joiningDate = joiningDate;
 	}
 
-	public Date getRelievingDate() {
+	public String getRelievingDate() {
 		return relievingDate;
 	}
 
-	public void setRelievingDate(Date relievingDate) {
+	public void setRelievingDate(String relievingDate) {
 		this.relievingDate = relievingDate;
 	}
 
@@ -321,7 +321,7 @@ public class Employee {
 
 	public Employee(String empId, String empFirstName, String empLastName, String password, String resetPassword,
 			String phnoeNumber, String gender, Date dateOfBirth, String address1, String address2, String empEmail,
-			Date joiningDate, Date relievingDate, String managerEmail, int experience, String qualication,
+			String joiningDate, String relievingDate, String managerEmail, int experience, String qualication,
 			int bankAccountNo, String ifscCode, String bankName, String branchName, String employeement,
 			Designation designation, Role roles, Department department) {
 		super();
