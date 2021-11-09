@@ -1,5 +1,7 @@
 package com.hutech.payrollapp.api.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -45,7 +47,7 @@ public class Employee {
 	private String gender;
 
 	@NotEmpty
-	private String dateOfBirth;
+	private Date dateOfBirth;
 
 	@NotEmpty
 	@Size(min = 5, max = 50, message = "ADDRESS MUST BE 5 TO 50 CHARACTERS")
@@ -56,8 +58,8 @@ public class Employee {
 	@Size(min = 10, max = 30, message = "ADDRESS MUST BE 10 TO 30 CHARACTERS")
 	@Email
 	private String empEmail;
-	private String joiningDate;
-	private String relievingDate;
+	private Date joiningDate;
+	private Date relievingDate;
 
 	@NotEmpty
 	@Email
@@ -166,11 +168,11 @@ public class Employee {
 		this.gender = gender;
 	}
 
-	public String getDateOfBirth() {
+	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -198,19 +200,19 @@ public class Employee {
 		this.empEmail = empEmail;
 	}
 
-	public String getJoiningDate() {
+	public Date getJoiningDate() {
 		return joiningDate;
 	}
 
-	public void setJoiningDate(String joiningDate) {
+	public void setJoiningDate(Date joiningDate) {
 		this.joiningDate = joiningDate;
 	}
 
-	public String getRelievingDate() {
+	public Date getRelievingDate() {
 		return relievingDate;
 	}
 
-	public void setRelievingDate(String relievingDate) {
+	public void setRelievingDate(Date relievingDate) {
 		this.relievingDate = relievingDate;
 	}
 
@@ -329,8 +331,8 @@ public class Employee {
 	
 
 	public Employee(String empId, String empFirstName, String empLastName, String password, String resetPassword,
-			String phnoeNumber, String gender, String dateOfBirth, String address1, String address2, String empEmail,
-			String joiningDate, String relievingDate, String managerEmail, int experience, String qualication,
+			String phnoeNumber, String gender, Date dateOfBirth, String address1, String address2, String empEmail,
+			Date joiningDate, Date relievingDate, String managerEmail, int experience, String qualication,
 			int bankAccountNo, String ifscCode, String bankName, String branchName,
 			String employeement, Designation designation, Role roles, Department department) {
 		super();
